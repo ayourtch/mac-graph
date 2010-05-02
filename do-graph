@@ -1,0 +1,5 @@
+#!/bin/sh
+# argument is the pcap file to graph. It will append the .jpg to the file name - the graph will be there.
+
+./mac-parser $1 lib.lua | dot -Goverlap=false -Nfontsize=10 -Tjpeg -o $1.jpg
+
